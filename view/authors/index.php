@@ -4,33 +4,25 @@
 
 </head>
 <body>
-<main>
+  <main>
 	
 	<header>
 		<h1>Authors</h1>
 	</header>
+ 
+	<li><a href="<?= URL ?>author/create">Add an author</a></li>
+
+ </main>
+	
 	<table>
-
-		<a href="<?= URL ?>author/create">Add</a>
-
 		<tr>
 		    <th>Id</th>
 			<th>Name</th>
 			<th>Address</th>
 			<th>Zipcode</th>
 			<th>City</th>
-			<th>Action</th>
+			<th colspan="2">Action</th>
 		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table>
-</main>
-<br>
-	<table>
 <?php 
 	foreach($authors as $author){
 ?>
@@ -40,14 +32,15 @@
 		<td><?php echo $author['author_address']; ?></td>
         <td><?php echo $author['author_zipcode']; ?></td>
         <td><?php echo $author['author_city']; ?></td>
-        <td><a href="<?php echo URL ?>author/edit/<?= $author['author_id']; ?>">edit</a></td>
-<!--         <td><a href="<?= URL ?>student/edit/<?= $student['student_id'] ?>">Edit</a></td>
- -->
-
+        <td><a href="<?= URL ?>author/edit/<?= $author['author_id'] ?>">edit</a></td>.               	
+        <td><a href="<?= URL ?>author/delete/<?= $author['author_id'] ?>">delete</a></td>
 	</tr>
+
 <?php																			
 	} 
 ?>
-	</table>
+
+</table>
+	
 <footer>&copy; by Da Vinci College</footer>
 </body>

@@ -1,12 +1,20 @@
+	<body>
+	  <main>
 	<h1>Edit</h1>
+	<table>
 	<form action="<?= URL ?>author/editSave" method="post">
 	
-		<input type="text" name="name" value="<?= $author['author_name']; ?>">
-		<input type="text" name="address" value="<?= $author['author_address']; ?>">
-     	<input type="text" name="zipcode" value="<?= $author['author_zipcode']; ?>">
-        <input type="text" name="city" value="<?= $author['author_city']; ?>">
+		<tr><input type="text" name="name" value="<?= $author['author_name']; ?>"></tr>
+		<tr><input type="text" name="address" value="<?= $author['author_address']; ?>"></tr>
+     	<tr><input type="text" name="zipcode" value="<?= $author['author_zipcode']; ?>"></tr>
+        <tr><input type="text" name="city" value="<?= $author['author_city']; ?>"></tr>
 
 		<input type="hidden" name="id" value="<?= $author['author_id']; ?>">
-		<input type="submit" value="Edit">
+		<tr><input type="submit" value="Edit"></tr>
+	</table>
 	
 	</form>
+	</main>
+<footer>&copy; by Da Vinci College</footer>
+
+	</body>

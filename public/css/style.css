@@ -30,8 +30,7 @@ th{
 	color: white;
 }
 
-li,a
-{
+li,a{
 	display: inline;
 	padding: 5px;
 	text-decoration: none;
@@ -39,11 +38,13 @@ li,a
 	font-family: verdana;
 	font-size: 16px;
 }
+
 li a:hover, td a:hover
 {
 	text-decoration: underline;
 	color: brown;
 }
+
 h5 a{
 	color: brown;
 	text-decoration: none;
@@ -62,12 +63,10 @@ header
 	background-repeat: no-repeat;
 	background-position: right;
 	height: 230px;
-	
+
 }
 
-/*header.books{
-	height: 150px;
-}*/
+
 nav {
 	display: inline-block;
 	margin-left: 250px;
@@ -87,7 +86,7 @@ h3{
 	font-size: 30px;
 	padding-left: 150px;
 	color: #c28f60;
-	
+
 	margin: 0px;
 }
 
@@ -129,4 +128,10 @@ form input[type="text"]{
 
 form div {
 	margin-bottom : 3px;
+}
+
+span{
+	font-family: courier;
+	font-size: 30px;
+	color: brown;
 }

@@ -58,12 +58,15 @@ function createAuthor()
 
 function editAuthor() 
 {
+	
 	$name = isset($_POST['name']) ? $_POST['name'] : null;
 	$address = isset($_POST['address']) ? $_POST['address'] : null;
-	$zipcode = isset($_POST['zipecode']) ? $_POST['zipcode'] : null;
+	$zipcode = isset($_POST['zipcode']) ? $_POST['zipcode'] : null;
 	$city = isset($_POST['city']) ? $_POST['city'] : null;
+	$id = isset($_POST['id']) ? $_POST['id'] : null;
 	
-	if (strlen($name) == 0 || strlen($address) == 0 || strlen($zipcode) == 0 || strlen($city)) {
+	if (strlen($name) == 0 || strlen($address) == 0 || strlen($zipcode) == 0 || strlen($city) == 0) {
+	
 		return false;
 	}
 	
@@ -75,7 +78,26 @@ function editAuthor()
 		':name' => $name,
 		':address' => $address,
 		':zipcode' => $zipcode,
-		':city' => $city));
+		':city' => $city,
+		':id' => $id));
+
+	$db = null;
+	
+	return true;
+}
+
+function deleteAuthor($id) 
+{
+	if (!$id) {
+		return false;
+	}
+	
+	$db = openDatabaseConnection();
+
+	$sql = "DELETE FROM authors WHERE author_id=:id ";
+	$query = $db->prepare($sql);
+	$query->execute(array(
+		':id' => $id));
 
 	$db = null;
 	

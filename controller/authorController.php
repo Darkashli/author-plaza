@@ -23,14 +23,14 @@ function createSave()
 		exit();
 	}
 
-	header("Location:" . URL . "author");
+	header("Location:" . URL . "author/index");
 }
 
 
 function edit($id)
 {
 	render("authors/edit", array(
-		'author' => getAuthor($id)
+		'author' => getAuthor($id),
 	));
 }
 
@@ -44,3 +44,15 @@ function editSave()
 
 	header("Location:" . URL . "author/index");
 } 
+
+
+function delete($id)
+{
+	if (!deleteAuthor($id)) {
+		header("Location:" . URL . "Error/message");
+		exit();
+	}
+
+		header("Location:" . URL . "author/index");
+}
+

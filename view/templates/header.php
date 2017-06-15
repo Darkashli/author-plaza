@@ -12,14 +12,13 @@
 		header("Cache-Control: post-check=0, pre-check=0", false);
 		header("Pragma: no-cache");
 	?>
- </head>
-<body>
+</head>
+  <body>
 	<nav>
-	<ul>
+	  <ul>
 		<li><a href="<?= URL ?>author/index">Authors</a></li>
 		<li><a href="<?= URL ?>book/index">Books</a></li>
-
-	</ul>
+	  </ul>
 	</nav>
-</body>
+  </body>
 </html>
