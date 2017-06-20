@@ -1,7 +1,6 @@
 
 <head>
 	<title>Author Plaza</title>
-
 </head>
 <body>
   <main>
@@ -9,9 +8,9 @@
 	<header>
 		<h1>Authors</h1>
 	</header>
- 
+   
 	<li><a href="<?= URL ?>author/create">Add an author</a></li>
-
+   
  </main>
 	
 	<table>

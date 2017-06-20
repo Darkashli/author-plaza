@@ -5,7 +5,7 @@ require(ROOT . "model/authorModel.php");
 function index(){
 
 	render("authors/index", array(
-		'authors' => getAllAuthors(),
+		'authors' => getAllAuthors(), 
 		
 	));
 }

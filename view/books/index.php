@@ -3,17 +3,16 @@
 	<title>Author Plaza</title>
 </head>
 <body>
-<main>
+  <main>
 	
 	<header>
 		<h1>Books</h1>
 		<h3>Ernest Cline</h3>
 	</header>
-	<nav>
-		<ul>
-			<li><a href="add.html"><h4>Add book</h4></a></li>
-		</ul>
-	</nav>
+	
+	   <li><a href="<?= URL ?>book/create">Add an book</a></li>
+		
+  </main>
 	<table>
 		<tr>
 		    <th>Id</th>
@@ -23,20 +22,21 @@
 			<th>Author id</th>
 
 			<th colspan="2">Action</th>
-		</tr>
-		<tr><?php foreach ($books as $book) { ?>
+		
+		<?php foreach ($books as $book) { 
+		?>
 		<tr>
 			<td><?= $book['book_id']; ?></td>
 			<td><?= $book['book_title']; ?></td>
 			<td><?= $book['book_publisher']; ?></td>
 			<td><?= $book['book_summary']; ?></td>
 			<td><?= $book['author_id']; ?></td>
-
-		
-		</tr>
+			<td><a href="<?= URL ?>book/edit/<?= $book['book_id'] ?>">edit</a></td>             	
+            <td><a href="<?= URL ?>book/delete/<?= $book['book_id'] ?>">delete</a></td>		
+        </tr>
 		<?php } ?>
 	</table>
 	<footer>&copy; by Da Vinci College</footer>
-</main>
+
 
 </body>

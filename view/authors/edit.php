@@ -1,5 +1,5 @@
-	<body>
-	  <main>
+<body>
+<main>
 	<h1>Edit</h1>
 	<table>
 	<form action="<?= URL ?>author/editSave" method="post">
@@ -14,7 +14,6 @@
 	</table>
 	
 	</form>
-	</main>
+</main>
 <footer>&copy; by Da Vinci College</footer>
-
-	</body>
+</body>
