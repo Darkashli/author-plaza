@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 27, 2017 at 04:42 PM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Host: localhost
+-- Generation Time: Oct 31, 2017 at 08:12 AM
+-- Server version: 10.2.8-MariaDB
+-- PHP Version: 7.0.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -40,11 +42,8 @@ CREATE TABLE `authors` (
 
 INSERT INTO `authors` (`author_id`, `author_name`, `author_address`, `author_zipcode`, `author_city`) VALUES
 (1, 'Ernest Cline', 'Main street 1', '5555 NY', 'New York'),
-(2, 'Stephen King', 'Warren Ave 1285', '04105', 'Portland'),
-(3, 'John Grisham', 'Goodman Rd 356', '38671', 'Southaven'),
-(4, 'Emily Barr', 'Mercers road', 'N70AA', 'London'),
-(5, 'Tom Clancy', 'Eastern Ave 843', '21224', 'Baltimore'),
-(6, 'Alaa', 'Drossaartstraat', '4204AS', 'Gorinchem');
+(8, 'af', 'f', 'f', 'ttt'),
+(11, 'Deny', 'Zwijndrecht', '332ES', 'Nederland');
 
 -- --------------------------------------------------------
 
@@ -94,12 +93,15 @@ ALTER TABLE `books`
 -- AUTO_INCREMENT for table `authors`
 --
 ALTER TABLE `authors`
-  MODIFY `author_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `author_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
   MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
